@@ -835,10 +835,26 @@ button {
   opacity: 0.7;
 }
 
+/* —— Instagram —— */
+.social__follow {
+  margin-top: 1.25rem;
+}
+
+.social__embed {
+  display: flex;
+  justify-content: center;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.social__embed .instagram-media {
+  min-width: min(100%, 326px) !important;
+}
+
 /* —— Order paths —— */
 .order-paths {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   max-width: var(--max);
   margin: 0 auto;
