@@ -1,23 +1,297 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="VidaGreens — all-natural cold-pressed juice in Huntington Park. Fresh, clean, pressed daily."
+      content="VidaGreens — all-natural cold-pressed juice in 16 oz pouches. Fresh from Huntington Park."
     />
+    <meta name="theme-color" content="#1F3D2C" />
+    <title>VidaGreens — 16 oz Cold-Pressed Juice Pouches</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>VidaGreens — Huntington Park Cold-Pressed Juice</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="site-nav">
+      <a class="nav__brand" href="#top">
+        <span class="nav__mark" aria-hidden="true"></span>
+        VidaGreens
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span>
+        <span></span>
+      </button>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#pouches">Pouches</a>
+        <a href="#craft">Craft</a>
+        <a href="#visit">Visit</a>
+        <a class="nav__cta" href="#visit">Order pickup</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero__stage">
+          <img
+            class="hero__pouch"
+            src="images/pouch-verde.png"
+            alt="VidaGreens Verde 16 fl oz cold-pressed juice pouch"
+            width="664"
+            height="1432"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__copy">
+          <p class="hero__brand">VidaGreens</p>
+          <h1 class="hero__headline">Cold-pressed juice in a 16 oz pouch.</h1>
+          <p class="hero__support">
+            All-natural. Nothing added. Pressed in Huntington Park and sealed fresh for the day.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#pouches">See the pouches</a>
+            <a class="btn btn--ghost" href="#visit">Find us</a>
+          </div>
+          <p class="hero__spec">16 FL OZ · 473 mL · Cold pressed · All natural</p>
+        </div>
+      </section>
+
+      <section class="section pouches" id="pouches">
+        <div class="section__header reveal">
+          <p class="eyebrow">The lineup</p>
+          <h2 class="section__title">Eight pouches. One honest press.</h2>
+          <p class="section__lede">
+            Soft matte 16 oz spout pouches—greens, fruit, and plant-based sips for every kind of day.
+          </p>
+        </div>
+
+        <div class="pouch-rail">
+          <article class="pouch-row reveal" style="--accent: #5a8f3c">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-verde.png" alt="Verde 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Daily green</p>
+              <h3 class="pouch-row__name">Verde</h3>
+              <p class="pouch-row__desc">
+                Kale, cucumber, celery, green apple, lemon, and ginger—bright and clean for every
+                morning.
+              </p>
+              <p class="pouch-row__ingredients">Kale · Cucumber · Celery · Green apple · Lemon · Ginger</p>
+            </div>
+          </article>
+
+          <article class="pouch-row reveal" style="--accent: #d4893a">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-sunrise.png" alt="Sunrise 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Golden glow</p>
+              <h3 class="pouch-row__name">Sunrise</h3>
+              <p class="pouch-row__desc">
+                Carrot, orange, turmeric, ginger, and lemon—a warm pour that tastes like Huntington
+                Park mornings.
+              </p>
+              <p class="pouch-row__ingredients">Carrot · Orange · Turmeric · Ginger · Lemon</p>
+            </div>
+          </article>
+
+          <article class="pouch-row reveal" style="--accent: #9b3a4a">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-raiz.png" alt="Raíz 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Deep root</p>
+              <h3 class="pouch-row__name">Raíz</h3>
+              <p class="pouch-row__desc">
+                Beet and berry rooted in bright citrus—bold color, balanced sweetness, nothing
+                artificial.
+              </p>
+              <p class="pouch-row__ingredients">Beet · Raspberry · Strawberry · Apple · Lemon</p>
+            </div>
+          </article>
+
+          <article class="pouch-row reveal" style="--accent: #c9a227">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-tropic.png" alt="Tropic 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Island lift</p>
+              <h3 class="pouch-row__name">Tropic</h3>
+              <p class="pouch-row__desc">
+                Pineapple, mango, passion fruit, mint, and lime—tropical brightness without the sugar
+                crash.
+              </p>
+              <p class="pouch-row__ingredients">Pineapple · Mango · Passion fruit · Mint · Lime</p>
+            </div>
+          </article>
+
+          <article class="pouch-row reveal" style="--accent: #d1313d">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-watermelon.png" alt="Watermelon Strawberry Chia 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Hydrate &amp; glow</p>
+              <h3 class="pouch-row__name">Watermelon Strawberry Chia</h3>
+              <p class="pouch-row__desc">
+                Juicy watermelon and ripe strawberry with chia for a soft, satisfying finish—made with
+                real fruit.
+              </p>
+              <p class="pouch-row__ingredients">Watermelon · Strawberry · Chia · Lemon</p>
+            </div>
+          </article>
+
+          <article class="pouch-row reveal" style="--accent: #5c4033">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-chocolate.png" alt="Chocolate Almond 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Plant-based</p>
+              <h3 class="pouch-row__name">Chocolate Almond</h3>
+              <p class="pouch-row__desc">
+                Cacao almond drink with real almonds and Dutch cocoa—dairy-free, rich, and smooth.
+              </p>
+              <p class="pouch-row__ingredients">Almonds · Dutch cocoa · Dates · Vanilla</p>
+            </div>
+          </article>
+
+          <article class="pouch-row reveal" style="--accent: #3d5a9b">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-blueberry.png" alt="Blueberry &amp; Greens 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Berry greens</p>
+              <h3 class="pouch-row__name">Blueberry &amp; Greens</h3>
+              <p class="pouch-row__desc">
+                Sweet blueberry meets leafy greens for an antioxidant-bright press that still tastes
+                like fruit first.
+              </p>
+              <p class="pouch-row__ingredients">Blueberry · Spinach · Kale · Apple · Lemon</p>
+            </div>
+          </article>
+
+          <article class="pouch-row reveal" style="--accent: #6fa33a">
+            <div class="pouch-row__visual">
+              <img src="images/pouch-pineapple.png" alt="Pineapple &amp; Greens 16 oz pouch" loading="lazy" />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">16 FL OZ · Tropical greens</p>
+              <h3 class="pouch-row__name">Pineapple &amp; Greens</h3>
+              <p class="pouch-row__desc">
+                Sunny pineapple lifted by greens—tangy, fresh, and built for an afternoon reset.
+              </p>
+              <p class="pouch-row__ingredients">Pineapple · Kale · Spinach · Cucumber · Lime</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="craft" id="craft">
+        <div class="craft__panel reveal">
+          <p class="eyebrow eyebrow--light">Our promise</p>
+          <p class="craft__quote">If it doesn’t grow, it doesn’t go in the pouch.</p>
+        </div>
+        <div class="craft__copy reveal">
+          <p class="eyebrow">The craft</p>
+          <h2 class="section__title">Pressed clean. Packed soft.</h2>
+          <p class="section__lede">
+            Same cold-press care as a bottle—sealed in a 16 oz spout pouch you can take anywhere.
+          </p>
+          <ol class="craft__steps">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Source close</h3>
+                <p>Peak-ripeness produce. No concentrates. No powders.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Press cold</h3>
+                <p>Hydraulic cold-press keeps nutrients and flavor intact.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Fill fresh</h3>
+                <p>Poured the day it’s made into soft matte 16 oz pouches.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="visit section" id="visit">
+        <div class="visit__layout">
+          <div class="visit__copy reveal">
+            <p class="eyebrow">Huntington Park</p>
+            <h2 class="section__title">Grab a pouch on Pacific.</h2>
+            <p class="section__lede">
+              Pickup at the bar—pressed that morning, waiting in the cooler.
+            </p>
+            <dl class="visit__details">
+              <div>
+                <dt>Address</dt>
+                <dd>6120 Pacific Blvd<br />Huntington Park, CA 90255</dd>
+              </div>
+              <div>
+                <dt>Hours</dt>
+                <dd>Mon–Sat · 7am–7pm<br />Sun · 8am–4pm</dd>
+              </div>
+              <div>
+                <dt>Contact</dt>
+                <dd>(323) 555-0148<br />hola@vidagreens.com</dd>
+              </div>
+            </dl>
+            <div class="hero__actions visit__actions">
+              <a class="btn btn--primary" href="mailto:hola@vidagreens.com">Order for pickup</a>
+              <a
+                class="btn btn--outline"
+                href="https://maps.google.com/?q=6120+Pacific+Blvd+Huntington+Park+CA"
+                target="_blank"
+                rel="noreferrer"
+                >Get directions</a
+              >
+            </div>
+          </div>
+          <div class="visit__cluster reveal" aria-hidden="true">
+            <img class="visit__pouch visit__pouch--a" src="images/pouch-watermelon.png" alt="" />
+            <img class="visit__pouch visit__pouch--b" src="images/pouch-verde.png" alt="" />
+            <img class="visit__pouch visit__pouch--c" src="images/pouch-blueberry.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div>
+          <p class="footer__brand">VidaGreens</p>
+          <p class="footer__tag">All-natural cold-pressed juice · 16 oz pouches · Huntington Park</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#pouches">Pouches</a>
+          <a href="#craft">Craft</a>
+          <a href="#visit">Visit</a>
+          <a href="mailto:hola@vidagreens.com">Contact</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> VidaGreens. Pressed with care.</p>
+        <p>16 FL OZ (473 mL)</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
