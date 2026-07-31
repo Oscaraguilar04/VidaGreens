@@ -11,6 +11,8 @@ git checkout cursor/huerta-juicery-website-9917
 
 Open **`index.html`** in Chrome (double-click).
 
+To publish later: GitHub → **Settings → Pages** → Deploy from branch → `/` (root).
+
 ## Lineup
 
 Verde · Sunrise · Raíz · Tropic · Watermelon Strawberry Chia · Chocolate Almond · Blueberry & Greens · Pineapple & Greens
