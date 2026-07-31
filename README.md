@@ -9,18 +9,13 @@ git fetch origin
 git checkout cursor/huerta-juicery-website-9917
 ```
 
-Then open **`index.html`** in Chrome (double-click the file, or drag it into a browser window).
+Open **`index.html`** in Chrome (double-click).
 
-No `npm install`. No `npm run`. No local server needed.
+## Lineup
 
-## Permanent public URL
-
-In the GitHub repo: **Settings → Pages → Deploy from a branch →** choose this branch (or `main`) **/** (root) → Save.  
-Site will be at: `https://oscaraguilar04.github.io/VidaGreens/`
+Verde · Sunrise · Raíz · Tropic · Watermelon Strawberry Chia · Chocolate Almond · Blueberry & Greens · Pineapple & Greens
 
 ## Files
 
-- `index.html` — page
-- `styles.css` — pouch-matched styles (sage, forest green, soft matte look)
-- `script.js` — nav + scroll reveals
-- `images/` — 16 oz pouch product art
+- `index.html` / `styles.css` / `script.js`
+- `images/*.png` — transparent 16 oz pouch cutouts
