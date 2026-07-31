@@ -836,19 +836,84 @@ button {
 }
 
 /* —— Instagram —— */
+.social {
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5) 30%, rgba(246, 249, 243, 0.9));
+}
+
+.social__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  max-width: calc(var(--max) + 4rem);
+  margin: 0 auto;
+}
+
+.social__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 1.35rem 0 1.6rem;
+}
+
+.social__points li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.98rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.social__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50% 50% 45% 55%;
+  background: var(--lime);
+}
+
 .social__follow {
-  margin-top: 1.25rem;
+  margin-top: 0.25rem;
 }
 
 .social__embed {
   display: flex;
   justify-content: center;
-  max-width: var(--max);
-  margin: 0 auto;
 }
 
-.social__embed .instagram-media {
-  min-width: min(100%, 326px) !important;
+/* Blend the embed into the page — soft frame, full column width */
+.social__embed .instagram-media,
+.social__embed iframe.instagram-media {
+  width: 100% !important;
+  max-width: 640px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  border: 1px solid rgba(31, 61, 44, 0.1) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 48px rgba(31, 61, 44, 0.1) !important;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .social__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .social__embed .instagram-media,
+  .social__embed iframe.instagram-media {
+    max-width: 420px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .social__embed .instagram-media,
+  .social__embed iframe.instagram-media {
+    max-width: 100% !important;
+    border-radius: 14px !important;
+  }
 }
 
 /* —— Order paths —— */
