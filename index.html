@@ -32,11 +32,34 @@
       </button>
       <nav class="nav__links" id="nav-links" aria-label="Primary">
         <a href="#pouches">Pouches</a>
-        <a href="#craft">Craft</a>
-        <a href="#visit">Order</a>
-        <a class="nav__cta" href="#visit">Pickup or ship</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+        <button class="nav__cart" type="button" id="cart-toggle" aria-expanded="false" aria-controls="cart-panel">
+          Cart
+          <span class="nav__cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
       </nav>
     </header>
+
+    <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+    <aside class="cart-panel" id="cart-panel" aria-hidden="true" aria-labelledby="cart-title">
+      <div class="cart-panel__head">
+        <h2 id="cart-title">Your cart</h2>
+        <button type="button" class="cart-panel__close" id="cart-close" aria-label="Close cart">
+          ×
+        </button>
+      </div>
+      <p class="cart-panel__note">Demo cart — nothing is charged or submitted.</p>
+      <ul class="cart-panel__list" id="cart-list"></ul>
+      <p class="cart-panel__empty" id="cart-empty">Your cart is empty. Add a pouch below.</p>
+      <div class="cart-panel__foot">
+        <p class="cart-panel__total">
+          <span>Pouches</span>
+          <strong id="cart-total-qty">0</strong>
+        </p>
+        <a class="btn btn--primary cart-panel__checkout" href="#checkout">Continue to details</a>
+      </div>
+    </aside>
 
     <main id="main">
       <section class="hero" id="top">
@@ -54,12 +77,12 @@
           <p class="hero__brand">VidaGreens</p>
           <h1 class="hero__headline">Clear 16 oz pouches. Pickup or shipping.</h1>
           <p class="hero__support">
-            All-natural cold-pressed juice you can see—pressed in Huntington Park, ready for local
-            pickup or shipped to your door.
+            All-natural cold-pressed juice you can see—pressed in Huntington Park. Call, email, or
+            send your info to confirm pickup, or mock-checkout for shipping.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#visit">Order now</a>
-            <a class="btn btn--ghost" href="#pouches">See flavors</a>
+            <a class="btn btn--primary" href="#order">Start an order</a>
+            <a class="btn btn--ghost" href="#contact">Confirm pickup</a>
           </div>
           <p class="hero__spec">16 FL OZ · Clear pouch · Pickup &amp; shipping available</p>
         </div>
@@ -70,13 +93,18 @@
           <p class="eyebrow">The lineup</p>
           <h2 class="section__title">Four clear pouches. Same honest press.</h2>
           <p class="section__lede">
-            Transparent 16 oz spout pouches—see the pour. Available for pickup in Huntington Park or
-            shipping nationwide.
+            Add pouches to your demo cart, then enter contact and shipping details—no real checkout.
           </p>
         </div>
 
         <div class="pouch-rail">
-          <article class="pouch-row reveal" style="--accent: #d1313d">
+          <article
+            class="pouch-row reveal"
+            style="--accent: #d1313d"
+            data-id="watermelon"
+            data-name="Watermelon Strawberry Chia"
+            data-price="8"
+          >
             <div class="pouch-row__visual">
               <img
                 src="images/pouch-watermelon.png"
@@ -85,17 +113,26 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch</p>
+              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
               <h3 class="pouch-row__name">Watermelon Strawberry Chia</h3>
               <p class="pouch-row__desc">
                 Juicy watermelon and ripe strawberry with chia for a soft, satisfying
                 finish—hydrating and bright.
               </p>
               <p class="pouch-row__ingredients">Watermelon · Strawberry · Chia · Lemon</p>
+              <button class="btn btn--primary btn--add" type="button" data-add>
+                Add to cart
+              </button>
             </div>
           </article>
 
-          <article class="pouch-row reveal" style="--accent: #5c4033">
+          <article
+            class="pouch-row reveal"
+            style="--accent: #5c4033"
+            data-id="chocolate"
+            data-name="Chocolate Almond"
+            data-price="8"
+          >
             <div class="pouch-row__visual">
               <img
                 src="images/pouch-chocolate.png"
@@ -104,16 +141,25 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch</p>
+              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
               <h3 class="pouch-row__name">Chocolate Almond</h3>
               <p class="pouch-row__desc">
                 Cacao almond drink with real almonds and Dutch cocoa—dairy-free, rich, and smooth.
               </p>
               <p class="pouch-row__ingredients">Almonds · Dutch cocoa · Dates · Vanilla</p>
+              <button class="btn btn--primary btn--add" type="button" data-add>
+                Add to cart
+              </button>
             </div>
           </article>
 
-          <article class="pouch-row reveal" style="--accent: #3d5a9b">
+          <article
+            class="pouch-row reveal"
+            style="--accent: #3d5a9b"
+            data-id="blueberry"
+            data-name="Blueberry & Greens"
+            data-price="8"
+          >
             <div class="pouch-row__visual">
               <img
                 src="images/pouch-blueberry.png"
@@ -122,17 +168,26 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch</p>
+              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
               <h3 class="pouch-row__name">Blueberry &amp; Greens</h3>
               <p class="pouch-row__desc">
                 Sweet blueberry meets leafy greens for an antioxidant-bright press that still tastes
                 like fruit first.
               </p>
               <p class="pouch-row__ingredients">Blueberry · Spinach · Kale · Apple · Lemon</p>
+              <button class="btn btn--primary btn--add" type="button" data-add>
+                Add to cart
+              </button>
             </div>
           </article>
 
-          <article class="pouch-row reveal" style="--accent: #6fa33a">
+          <article
+            class="pouch-row reveal"
+            style="--accent: #6fa33a"
+            data-id="pineapple"
+            data-name="Pineapple & Greens"
+            data-price="8"
+          >
             <div class="pouch-row__visual">
               <img
                 src="images/pouch-pineapple.png"
@@ -141,98 +196,224 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch</p>
+              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
               <h3 class="pouch-row__name">Pineapple &amp; Greens</h3>
               <p class="pouch-row__desc">
                 Sunny pineapple lifted by greens—tangy, fresh, and built for an afternoon reset.
               </p>
               <p class="pouch-row__ingredients">Pineapple · Kale · Spinach · Cucumber · Lime</p>
+              <button class="btn btn--primary btn--add" type="button" data-add>
+                Add to cart
+              </button>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="craft" id="craft">
-        <div class="craft__panel reveal">
-          <p class="eyebrow eyebrow--light">Our promise</p>
-          <p class="craft__quote">If it doesn’t grow, it doesn’t go in the pouch.</p>
-        </div>
-        <div class="craft__copy reveal">
-          <p class="eyebrow">The craft</p>
-          <h2 class="section__title">Pressed clean. Packed clear.</h2>
+      <section class="section order" id="order">
+        <div class="section__header reveal">
+          <p class="eyebrow">How to get them</p>
+          <h2 class="section__title">Pickup, ship, or confirm with us.</h2>
           <p class="section__lede">
-            Cold-pressed and filled into clear 16 oz spout pouches—so you see exactly what you’re
-            drinking. Pickup locally or ship to your door.
+            Call, email, or send a quick message to lock in pickup—or use the demo cart for shipping
+            details.
           </p>
-          <ol class="craft__steps">
-            <li>
-              <span>01</span>
-              <div>
-                <h3>Source close</h3>
-                <p>Peak-ripeness produce. No concentrates. No powders.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <h3>Press cold</h3>
-                <p>Hydraulic cold-press keeps nutrients and flavor intact.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <h3>Fill clear</h3>
-                <p>Poured fresh into clear 16 oz pouches—pickup or shipping the same day.</p>
-              </div>
-            </li>
-          </ol>
+        </div>
+
+        <div class="order-paths reveal">
+          <a class="order-path" href="tel:+13235550148">
+            <span class="order-path__label">Call</span>
+            <strong>(323) 555-0148</strong>
+            <span>Talk through your pickup order</span>
+          </a>
+          <a class="order-path" href="mailto:hola@vidagreens.com?subject=Pickup%20confirmation">
+            <span class="order-path__label">Email</span>
+            <strong>hola@vidagreens.com</strong>
+            <span>Send flavors, qty, and pickup time</span>
+          </a>
+          <a class="order-path" href="#contact">
+            <span class="order-path__label">Contact form</span>
+            <strong>Confirm pickup</strong>
+            <span>Share your info—we’ll follow up</span>
+          </a>
+          <a class="order-path" href="#checkout">
+            <span class="order-path__label">Demo cart</span>
+            <strong>Ship to you</strong>
+            <span>Add pouches + enter shipping info</span>
+          </a>
         </div>
       </section>
 
-      <section class="visit section" id="visit">
-        <div class="visit__layout">
-          <div class="visit__copy reveal">
-            <p class="eyebrow">Order</p>
-            <h2 class="section__title">Pickup or shipping—your call.</h2>
+      <section class="section contact" id="contact">
+        <div class="contact__grid">
+          <div class="contact__intro reveal">
+            <p class="eyebrow">Confirm pickup</p>
+            <h2 class="section__title">Send us your pickup details.</h2>
             <p class="section__lede">
-              Grab clear pouches at the Huntington Park bar, or have them shipped cold to your door.
+              Prefer not to use the cart? Call, email, or fill this form so we can confirm your
+              order before you arrive.
             </p>
-            <dl class="visit__details">
-              <div>
-                <dt>Pickup</dt>
-                <dd>
-                  6120 Pacific Blvd<br />
-                  Huntington Park, CA 90255<br />
-                  <span class="visit__note">Mon–Sat 7am–7pm · Sun 8am–4pm</span>
-                </dd>
-              </div>
-              <div>
-                <dt>Shipping</dt>
-                <dd>
-                  Cold-packed shipping available nationwide.<br />
-                  <span class="visit__note">Order by email—we confirm before we ship.</span>
-                </dd>
-              </div>
-              <div>
-                <dt>Contact</dt>
-                <dd>(323) 555-0148<br />hola@vidagreens.com</dd>
-              </div>
-            </dl>
-            <div class="hero__actions visit__actions">
-              <a class="btn btn--primary" href="mailto:hola@vidagreens.com?subject=Pickup%20order"
-                >Order for pickup</a
-              >
-              <a class="btn btn--outline" href="mailto:hola@vidagreens.com?subject=Shipping%20order"
-                >Order shipping</a
-              >
+            <ul class="contact__channels">
+              <li>
+                <span>Call</span>
+                <a href="tel:+13235550148">(323) 555-0148</a>
+              </li>
+              <li>
+                <span>Email</span>
+                <a href="mailto:hola@vidagreens.com">hola@vidagreens.com</a>
+              </li>
+              <li>
+                <span>Visit</span>
+                <span>6120 Pacific Blvd, Huntington Park, CA 90255</span>
+              </li>
+              <li>
+                <span>Hours</span>
+                <span>Mon–Sat 7am–7pm · Sun 8am–4pm</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="pickup-form" novalidate>
+            <p class="form__badge">Demo form — does not send</p>
+            <div class="form__row">
+              <label for="pickup-name">Full name</label>
+              <input id="pickup-name" name="name" type="text" autocomplete="name" required />
             </div>
+            <div class="form__row form__row--split">
+              <div>
+                <label for="pickup-phone">Phone</label>
+                <input id="pickup-phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+              <div>
+                <label for="pickup-email">Email</label>
+                <input id="pickup-email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form__row">
+              <label for="pickup-when">Preferred pickup time</label>
+              <input id="pickup-when" name="when" type="text" placeholder="e.g. Tomorrow 10am" />
+            </div>
+            <div class="form__row">
+              <label for="pickup-order">What are you picking up?</label>
+              <textarea
+                id="pickup-order"
+                name="order"
+                rows="3"
+                placeholder="e.g. 2 Watermelon, 1 Blueberry & Greens"
+              ></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Send pickup info</button>
+            <p class="form__success" id="pickup-success" hidden>
+              Got it (demo only)—in a live site we’d confirm your pickup by phone or email.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section checkout" id="checkout">
+        <div class="section__header reveal">
+          <p class="eyebrow">Demo checkout</p>
+          <h2 class="section__title">Contact &amp; shipping details.</h2>
+          <p class="section__lede">
+            Add beverages to your cart, then fill this in. Nothing is processed—this is a mockup
+            only.
+          </p>
+        </div>
+
+        <div class="checkout__layout reveal">
+          <div class="checkout__summary">
+            <h3>Cart summary</h3>
+            <ul id="checkout-summary"></ul>
+            <p class="checkout__empty" id="checkout-empty">No pouches yet—add some above.</p>
+            <p class="checkout__total">
+              Estimated total
+              <strong id="checkout-total">$0</strong>
+            </p>
           </div>
-          <div class="visit__cluster reveal" aria-hidden="true">
-            <img class="visit__pouch visit__pouch--a" src="images/pouch-blueberry.png" alt="" />
-            <img class="visit__pouch visit__pouch--b" src="images/pouch-watermelon.png" alt="" />
-            <img class="visit__pouch visit__pouch--c" src="images/pouch-pineapple.png" alt="" />
-          </div>
+
+          <form class="form" id="checkout-form" novalidate>
+            <p class="form__badge">Mockup only — no payment, no shipping</p>
+
+            <fieldset>
+              <legend>Contact</legend>
+              <div class="form__row">
+                <label for="ship-name">Full name</label>
+                <input id="ship-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="form__row form__row--split">
+                <div>
+                  <label for="ship-email">Email</label>
+                  <input id="ship-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div>
+                  <label for="ship-phone">Phone</label>
+                  <input id="ship-phone" name="phone" type="tel" autocomplete="tel" required />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Shipping</legend>
+              <div class="form__row">
+                <label for="ship-address">Street address</label>
+                <input
+                  id="ship-address"
+                  name="address"
+                  type="text"
+                  autocomplete="street-address"
+                  required
+                />
+              </div>
+              <div class="form__row form__row--split">
+                <div>
+                  <label for="ship-city">City</label>
+                  <input id="ship-city" name="city" type="text" autocomplete="address-level2" required />
+                </div>
+                <div>
+                  <label for="ship-state">State</label>
+                  <input
+                    id="ship-state"
+                    name="state"
+                    type="text"
+                    autocomplete="address-level1"
+                    maxlength="2"
+                    placeholder="CA"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form__row form__row--split">
+                <div>
+                  <label for="ship-zip">ZIP</label>
+                  <input
+                    id="ship-zip"
+                    name="zip"
+                    type="text"
+                    autocomplete="postal-code"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="ship-method">Method</label>
+                  <select id="ship-method" name="method">
+                    <option>Cold-packed ground</option>
+                    <option>Local courier (LA area)</option>
+                    <option>Pickup instead</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <label for="ship-notes">Order notes</label>
+                <textarea id="ship-notes" name="notes" rows="2" placeholder="Gate code, allergies, etc."></textarea>
+              </div>
+            </fieldset>
+
+            <button class="btn btn--primary" type="submit">Place demo order</button>
+            <p class="form__success" id="checkout-success" hidden>
+              Demo order captured locally only—no payment taken, nothing shipped. Use Call or Email
+              to place a real order.
+            </p>
+          </form>
         </div>
       </section>
     </main>
@@ -247,14 +428,15 @@
         </div>
         <nav class="footer__nav" aria-label="Footer">
           <a href="#pouches">Pouches</a>
-          <a href="#craft">Craft</a>
-          <a href="#visit">Order</a>
-          <a href="mailto:hola@vidagreens.com">Contact</a>
+          <a href="#order">Order</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+13235550148">Call</a>
+          <a href="mailto:hola@vidagreens.com">Email</a>
         </nav>
       </div>
       <div class="footer__bottom">
         <p>© <span id="year"></span> VidaGreens. Pressed with care.</p>
-        <p>Pickup &amp; shipping available</p>
+        <p>Demo cart · Pickup &amp; shipping available</p>
       </div>
     </footer>
 
