@@ -926,26 +926,30 @@ button {
 /* —— Order paths —— */
 .order-paths {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  max-width: var(--max);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.1rem;
+  max-width: calc(var(--max) + 4rem);
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .order-path {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding: 1.25rem 1.15rem;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-soft);
-  transition: transform 0.25s var(--ease), border-color 0.2s ease;
+  gap: 0.4rem;
+  min-height: 11rem;
+  padding: 1.5rem 1.35rem 1.35rem;
+  background: var(--white);
+  border: 1px solid rgba(31, 61, 44, 0.1);
+  border-top: 3px solid var(--forest);
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(31, 61, 44, 0.06);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
 .order-path:hover {
-  transform: translateY(-3px);
-  border-color: rgba(31, 61, 44, 0.28);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(31, 61, 44, 0.12);
 }
 
 .order-path__label {
@@ -954,11 +958,13 @@ button {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--leaf);
+  margin-bottom: 0.15rem;
 }
 
 .order-path strong {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
   color: var(--forest);
   letter-spacing: -0.02em;
 }
@@ -966,12 +972,19 @@ button {
 .order-path span:last-child {
   font-weight: 300;
   font-size: 0.92rem;
+  line-height: 1.45;
   color: var(--muted);
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 @media (max-width: 900px) {
   .order-paths {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .order-path {
+    min-height: 0;
   }
 }
 
