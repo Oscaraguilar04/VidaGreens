@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Vida Greens — small-batch smoothies in clear 16 oz pouches, made with real ingredients in Huntington Park. Pickup and shipping available."
+    />
+    <meta name="theme-color" content="#1F3D2C" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vida Greens — Small-Batch Smoothie Pouches" />
+    <meta
+      property="og:description"
+      content="Plant-based, whole-food smoothies in clear 16 oz pouches. Made with intention in Huntington Park — pickup & shipping."
+    />
+    <meta
+      property="og:image"
+      content="https://oscaraguilar04.github.io/VidaGreens/images/pouch-pineapple.webp"
+    />
+    <meta property="og:url" content="https://oscaraguilar04.github.io/VidaGreens/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Vida Greens — Small-Batch Smoothie Pouches · Huntington Park</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="site-nav">
+      <a class="nav__brand" href="#top">
+        <span class="nav__heart" aria-hidden="true">♡</span>
+        Vida Greens
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span>
+        <span></span>
+      </button>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#menu">Menu</a>
+        <a href="#ritual">Our ritual</a>
+        <a href="#social">Instagram</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+        <button
+          class="nav__cart"
+          type="button"
+          id="cart-toggle"
+          aria-expanded="false"
+          aria-controls="cart-panel"
+        >
+          Cart
+          <span class="nav__cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+    <aside class="cart-panel" id="cart-panel" aria-hidden="true" aria-labelledby="cart-title">
+      <div class="cart-panel__head">
+        <h2 id="cart-title">Your cooler</h2>
+        <button type="button" class="cart-panel__close" id="cart-close" aria-label="Close cart">
+          ×
+        </button>
+      </div>
+      <p class="cart-panel__note">No payment online — we confirm every order before it’s made.</p>
+      <ul class="cart-panel__list" id="cart-list"></ul>
+      <p class="cart-panel__empty" id="cart-empty">Your cooler’s empty. Grab a pouch from the menu.</p>
+      <div class="cart-panel__foot">
+        <p class="cart-panel__total">
+          <span>Pouches</span>
+          <strong id="cart-total-qty">0</strong>
+        </p>
+        <a class="btn btn--primary cart-panel__checkout" href="#checkout">Continue to details</a>
+      </div>
+    </aside>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero__stage">
+          <img
+            class="hero__pouch"
+            src="images/pouch-watermelon.webp"
+            alt="Vida Greens Strawberry Watermelon Chia Seed smoothie in a clear zipper drink pouch"
+            width="1000"
+            height="1500"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__copy">
+          <p class="hero__locale">Huntington Park · small batch</p>
+          <p class="hero__brand">Vida Greens</p>
+          <h1 class="hero__headline">Real-ingredient smoothies in a clear 16 oz pouch.</h1>
+          <p class="hero__support">
+            Plant-based, whole-food blends made with intention—sealed in clear zipper pouches for
+            pickup on Pacific or cold shipping to your door.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#menu">Explore the menu</a>
+            <a class="btn btn--ghost" href="#contact">Confirm a pickup</a>
+          </div>
+          <p class="hero__spec">Small batch · 16 FL OZ · $7 · Pickup &amp; shipping</p>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>Cold-pressed daily</span>
+          <span>Plant-based</span>
+          <span>No concentrates</span>
+          <span>No artificial anything</span>
+          <span>Refrigerated fresh</span>
+          <span>Huntington Park made</span>
+          <span>Cold-pressed daily</span>
+          <span>Plant-based</span>
+          <span>No concentrates</span>
+          <span>No artificial anything</span>
+          <span>Refrigerated fresh</span>
+          <span>Huntington Park made</span>
+        </div>
+      </div>
+
+      <section class="section standards" id="standards">
+        <div class="section__header reveal">
+          <p class="eyebrow">The standard</p>
+          <h2 class="section__title">A professional cooler, not a mystery mix.</h2>
+          <p class="section__lede">
+            Every pouch is blended to smoothie-bar standards—clean ingredients, cold handling, and a
+            recipe you can taste.
+          </p>
+        </div>
+        <ul class="standards__list reveal">
+          <li>
+            <strong>Refreshing &amp; nutritious</strong>
+            <p>Bright, hydrating blends built to fuel real days—never heavy, never fake-sweet.</p>
+          </li>
+          <li>
+            <strong>Made with real ingredients</strong>
+            <p>Whole fruit, organic baby greens, dates, oats, hemp and chia. Nothing artificial.</p>
+          </li>
+          <li>
+            <strong>Small batch, made with intention</strong>
+            <p>Blended in small runs so every clear pouch tastes like it was made for you—it was.</p>
+          </li>
+          <li>
+            <strong>Plant-based &amp; whole food</strong>
+            <p>Everything grows. Kept cold from our cooler to yours—pickup or cold-packed shipping.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section menu" id="menu">
+        <div class="section__header reveal">
+          <p class="eyebrow">The menu</p>
+          <h2 class="section__title">Four blends. Built like a smoothie bar.</h2>
+          <p class="section__lede">
+            Hydrate, greens, or cacao comfort—each clear zipper pouch is a full 16 oz ritual, ready for anywhere.
+          </p>
+        </div>
+
+        <div class="pouch-rail">
+          <article
+            class="pouch-row reveal"
+            style="--accent: #d1313d"
+            data-id="watermelon"
+            data-name="Strawberry Watermelon Chia Seed Smoothie"
+            data-price="7"
+          >
+            <div class="pouch-row__visual">
+              <img
+                src="images/pouch-watermelon.webp"
+                alt="Strawberry Watermelon Chia Seed smoothie in a clear zipper pouch"
+                loading="lazy"
+              />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">Hydrate · 16 FL OZ · $7</p>
+              <h3 class="pouch-row__name">Strawberry Watermelon Chia Seed</h3>
+              <p class="pouch-row__best">Best for: post-walk cool-down · sunny afternoons</p>
+              <p class="pouch-row__desc">
+                Three ingredients, nothing else—juicy watermelon and ripe strawberries with organic
+                chia for a silky, hydrating sip.
+              </p>
+              <p class="pouch-row__ingredients">Watermelon · Strawberries · Organic chia seeds</p>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
+            </div>
+          </article>
+
+          <article
+            class="pouch-row reveal"
+            style="--accent: #5c4033"
+            data-id="chocolate"
+            data-name="Chocolate Almond Milk Coffee"
+            data-price="7"
+          >
+            <div class="pouch-row__visual">
+              <img
+                src="images/pouch-chocolate.webp"
+                alt="Chocolate Almond Milk Coffee in a clear zipper pouch"
+                loading="lazy"
+              />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">Coffee ritual · 16 FL OZ · $7</p>
+              <h3 class="pouch-row__name">Chocolate Almond Milk Coffee</h3>
+              <p class="pouch-row__best">Best for: morning fuel · afternoon pick-me-up</p>
+              <p class="pouch-row__desc">
+                100% Colombian coffee with Ibarra chocolate, almond milk, and organic agave—our
+                dairy-free café pour in a pouch. Contains almonds.
+              </p>
+              <p class="pouch-row__ingredients">
+                Water · 100% Colombian coffee · Ibarra chocolate · Almond milk · Organic agave
+              </p>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
+            </div>
+          </article>
+
+          <article
+            class="pouch-row reveal"
+            style="--accent: #3d5a9b"
+            data-id="blueberry"
+            data-name="Blueberry & Greens Smoothie"
+            data-price="7"
+          >
+            <div class="pouch-row__visual">
+              <img
+                src="images/pouch-blueberry.webp"
+                alt="Blueberry &amp; Greens smoothie in a clear zipper pouch"
+                loading="lazy"
+              />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">Antioxidant greens · 16 FL OZ · $7</p>
+              <h3 class="pouch-row__name">Blueberry &amp; Greens</h3>
+              <p class="pouch-row__best">Best for: desk days · steady energy</p>
+              <p class="pouch-row__desc">
+                Blueberries lead; organic baby greens follow quietly—rounded out with dates, oats,
+                hemp, and chia so it tastes like fruit first.
+              </p>
+              <p class="pouch-row__ingredients">
+                Pineapple · Blueberries · Orange · Cucumber · Green apple · Organic baby greens
+                (kale, spinach, chard, beet tops) · Dates · Rolled oats · Hemp seeds · Chia seeds
+              </p>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
+            </div>
+          </article>
+
+          <article
+            class="pouch-row reveal"
+            style="--accent: #6fa33a"
+            data-id="pineapple"
+            data-name="Pineapple & Greens Smoothie"
+            data-price="7"
+          >
+            <div class="pouch-row__visual">
+              <img
+                src="images/pouch-pineapple.webp"
+                alt="Pineapple &amp; Greens smoothie in a clear zipper pouch"
+                loading="lazy"
+              />
+            </div>
+            <div class="pouch-row__body">
+              <p class="pouch-row__meta">Tropical greens · 16 FL OZ · $7</p>
+              <h3 class="pouch-row__name">Pineapple &amp; Greens</h3>
+              <p class="pouch-row__best">Best for: midday lift · pre-gym brightness</p>
+              <p class="pouch-row__desc">
+                Sunny pineapple cut with cucumber and organic baby greens—tangy, crisp, and built to
+                wake up your afternoon without the crash.
+              </p>
+              <p class="pouch-row__ingredients">
+                Pineapple · Orange · Cucumber · Green apple · Organic baby greens (kale, spinach,
+                chard, beet tops) · Dates · Rolled oats · Hemp seeds · Chia seeds
+              </p>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ritual" id="ritual">
+        <div class="ritual__media reveal">
+          <img
+            src="images/ritual-farmers.webp"
+            alt="Farmer in a straw hat picking a ripe mango from the tree"
+            loading="lazy"
+          />
+        </div>
+        <div class="ritual__copy reveal">
+          <p class="eyebrow">Our ritual</p>
+          <h2 class="section__title">Born on Pacific. Blended for the block.</h2>
+          <p class="section__lede">
+            Vida Greens is Huntington Park’s neighborhood smoothie maker—where the cooler stays stocked,
+            the produce is loud, and “healthy” means honest.
+          </p>
+          <blockquote class="ritual__quote">
+            “If it doesn’t grow, it doesn’t go in the pouch.”
+          </blockquote>
+          <ol class="ritual__steps">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Source bright</h3>
+                <p>Peak fruit and greens—washed, cut, and ready before first pour.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Blend cold</h3>
+                <p>Cold-pressed and blended for a true smoothie texture—never watered down.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Zip &amp; chill</h3>
+                <p>Filled into clear zipper drink pouches, chilled for pickup or ship.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section social" id="social">
+        <div class="social__layout">
+          <div class="social__intro reveal">
+            <p class="eyebrow">On Instagram</p>
+            <h2 class="section__title">Follow LoveVida @vidagreens.</h2>
+            <p class="section__lede">
+              Fresh pours, pouch drops, and daily cooler energy—see what’s blending right now on
+              Pacific.
+            </p>
+            <ul class="social__points">
+              <li>Real pouches, poured that morning</li>
+              <li>Menu drops &amp; seasonal blends first</li>
+              <li>DM to reserve your pickup</li>
+            </ul>
+            <a
+              class="btn btn--primary social__follow"
+              href="https://www.instagram.com/vidagreens/"
+              target="_blank"
+              rel="noreferrer"
+              >Open @vidagreens</a
+            >
+          </div>
+
+          <div class="social__embed reveal">
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/vidagreens/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-version="14"
+            style="
+              background: #fff;
+              border: 0;
+              border-radius: 3px;
+              box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+              margin: 0 auto;
+              max-width: 540px;
+              min-width: 326px;
+              padding: 0;
+              width: calc(100% - 2px);
+            "
+          >
+            <div style="padding: 16px">
+              <a
+                href="https://www.instagram.com/vidagreens/?utm_source=ig_embed&amp;utm_campaign=loading"
+                style="
+                  background: #ffffff;
+                  line-height: 0;
+                  padding: 0 0;
+                  text-align: center;
+                  text-decoration: none;
+                  width: 100%;
+                "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div style="display: flex; flex-direction: row; align-items: center">
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 50%;
+                      flex-grow: 0;
+                      height: 40px;
+                      margin-right: 14px;
+                      width: 40px;
+                    "
+                  ></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 100px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 60px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div style="padding: 19% 0"></div>
+                <div style="display: block; height: 50px; margin: 0 auto 12px; width: 50px">
+                  <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                        <path
+                          d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div style="padding-top: 8px">
+                  <div
+                    style="
+                      color: #3897f0;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-weight: 550;
+                      line-height: 18px;
+                    "
+                  >
+                    View this profile on Instagram
+                  </div>
+                </div>
+                <div style="padding: 12.5% 0"></div>
+              </a>
+              <p
+                style="
+                  color: #c9c8cd;
+                  font-family: Arial, sans-serif;
+                  font-size: 14px;
+                  line-height: 17px;
+                  margin-bottom: 0;
+                  margin-top: 8px;
+                  overflow: hidden;
+                  padding: 8px 0 7px;
+                  text-align: center;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              >
+                <a
+                  href="https://www.instagram.com/vidagreens/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="color: #c9c8cd; font-family: Arial, sans-serif; font-size: 14px"
+                  target="_blank"
+                  rel="noreferrer"
+                  >LoveVida</a
+                >
+                (@<a
+                  href="https://www.instagram.com/vidagreens/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="color: #c9c8cd; font-family: Arial, sans-serif; font-size: 14px"
+                  target="_blank"
+                  rel="noreferrer"
+                  >vidagreens</a
+                >) · Instagram photos and videos
+              </p>
+            </div>
+          </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section order" id="order">
+        <div class="section__header reveal">
+          <p class="eyebrow">Get your blend</p>
+          <h2 class="section__title">Call us. Email us. Or build your cooler.</h2>
+          <p class="section__lede">
+            We’re a real counter on Pacific—happy to confirm pickup by phone or note, or walk you
+            through shipping.
+          </p>
+        </div>
+
+        <div class="order-paths reveal">
+          <a class="order-path" href="tel:+13235550148">
+            <span class="order-path__label">Call the bar</span>
+            <strong>(323) 555-0148</strong>
+            <span>We’ll confirm flavors &amp; pickup time</span>
+          </a>
+          <a class="order-path" href="mailto:hola@vidagreens.com?subject=Pickup%20confirmation">
+            <span class="order-path__label">Email hola</span>
+            <strong>hola@vidagreens.com</strong>
+            <span>Send your list—we reply same day</span>
+          </a>
+          <a class="order-path" href="#contact">
+            <span class="order-path__label">Send info</span>
+            <strong>Confirm pickup</strong>
+            <span>Name, phone, time, and order notes</span>
+          </a>
+          <a
+            class="order-path"
+            href="https://www.instagram.com/vidagreens/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="order-path__label">Instagram DM</span>
+            <strong>@vidagreens</strong>
+            <span>Message LoveVida to order or ask</span>
+          </a>
+          <a class="order-path" href="#checkout">
+            <span class="order-path__label">Online cart</span>
+            <strong>Ship cold</strong>
+            <span>Add pouches + shipping details</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact__grid">
+          <div class="contact__intro reveal">
+            <p class="eyebrow">Talk to the bar</p>
+            <h2 class="section__title">Confirm your pickup like a regular.</h2>
+            <p class="section__lede">
+              Tell us who you are, what you want, and when you’re coming—we’ll have your pouches
+              chilled and ready.
+            </p>
+            <ul class="contact__channels">
+              <li>
+                <span>Call</span>
+                <a href="tel:+13235550148">(323) 555-0148</a>
+              </li>
+              <li>
+                <span>Email</span>
+                <a href="mailto:hola@vidagreens.com">hola@vidagreens.com</a>
+              </li>
+              <li>
+                <span>Instagram</span>
+                <a href="https://www.instagram.com/vidagreens/" target="_blank" rel="noreferrer"
+                  >@vidagreens · LoveVida</a
+                >
+              </li>
+              <li>
+                <span>The bar</span>
+                <span>6120 Pacific Blvd, Huntington Park, CA 90255</span>
+              </li>
+              <li>
+                <span>Cooler hours</span>
+                <span>Mon–Sat 7am–7pm · Sun 8am–4pm</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="pickup-form" novalidate>
+            <p class="form__badge">Order request — we confirm by phone or email</p>
+            <div class="form__row">
+              <label for="pickup-name">Full name</label>
+              <input id="pickup-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form__row form__row--split">
+              <div>
+                <label for="pickup-phone">Phone</label>
+                <input id="pickup-phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+              <div>
+                <label for="pickup-email">Email</label>
+                <input id="pickup-email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form__row">
+              <label for="pickup-when">Preferred pickup time</label>
+              <input id="pickup-when" name="when" type="text" placeholder="e.g. Tomorrow 10am" />
+            </div>
+            <div class="form__row">
+              <label for="pickup-order">What are you picking up?</label>
+              <textarea
+                id="pickup-order"
+                name="order"
+                rows="3"
+                placeholder="e.g. 2 Watermelon, 1 Blueberry & Greens"
+              ></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Send pickup info</button>
+            <p class="form__success" id="pickup-success" hidden>
+              Got it—we’ll confirm your pickup time by phone or email shortly.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section checkout" id="checkout">
+        <div class="section__header reveal">
+          <p class="eyebrow">Checkout</p>
+          <h2 class="section__title">Contact &amp; shipping details.</h2>
+          <p class="section__lede">
+            Build your cooler, leave your info, and we’ll confirm your total and ship date—no
+            payment taken online.
+          </p>
+        </div>
+
+        <div class="checkout__layout reveal">
+          <div class="checkout__summary">
+            <h3>Cooler summary</h3>
+            <ul id="checkout-summary"></ul>
+            <p class="checkout__empty" id="checkout-empty">No pouches yet—add some from the menu.</p>
+            <p class="checkout__total">
+              Estimated total
+              <strong id="checkout-total">$0</strong>
+            </p>
+          </div>
+
+          <form class="form" id="checkout-form" novalidate>
+            <p class="form__badge">Order request — no payment online; we confirm your total first</p>
+
+            <fieldset>
+              <legend>Contact</legend>
+              <div class="form__row">
+                <label for="ship-name">Full name</label>
+                <input id="ship-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="form__row form__row--split">
+                <div>
+                  <label for="ship-email">Email</label>
+                  <input id="ship-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div>
+                  <label for="ship-phone">Phone</label>
+                  <input id="ship-phone" name="phone" type="tel" autocomplete="tel" required />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Shipping</legend>
+              <div class="form__row">
+                <label for="ship-address">Street address</label>
+                <input
+                  id="ship-address"
+                  name="address"
+                  type="text"
+                  autocomplete="street-address"
+                  required
+                />
+              </div>
+              <div class="form__row form__row--split">
+                <div>
+                  <label for="ship-city">City</label>
+                  <input
+                    id="ship-city"
+                    name="city"
+                    type="text"
+                    autocomplete="address-level2"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="ship-state">State</label>
+                  <input
+                    id="ship-state"
+                    name="state"
+                    type="text"
+                    autocomplete="address-level1"
+                    maxlength="2"
+                    placeholder="CA"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form__row form__row--split">
+                <div>
+                  <label for="ship-zip">ZIP</label>
+                  <input
+                    id="ship-zip"
+                    name="zip"
+                    type="text"
+                    autocomplete="postal-code"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="ship-method">Method</label>
+                  <select id="ship-method" name="method">
+                    <option>Cold-packed ground</option>
+                    <option>Local courier (LA area)</option>
+                    <option>Pickup instead</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <label for="ship-notes">Order notes</label>
+                <textarea
+                  id="ship-notes"
+                  name="notes"
+                  rows="2"
+                  placeholder="Gate code, allergies, etc."
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <button class="btn btn--primary" type="submit">Send order request</button>
+            <p class="form__success" id="checkout-success" hidden>
+              Request received—we’ll reach out to confirm your total, payment, and ship date. Or
+              call us to finish right now.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div>
+          <p class="footer__brand">♡ Vida Greens</p>
+          <p class="footer__tag">
+            Small-batch smoothies · Clear 16 oz pouches · Pickup &amp; shipping · Huntington Park
+          </p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#menu">Menu</a>
+          <a href="#ritual">Ritual</a>
+          <a href="#social">Instagram</a>
+          <a href="#order">Order</a>
+          <a href="https://www.instagram.com/vidagreens/" target="_blank" rel="noreferrer"
+            >@vidagreens</a
+          >
+          <a href="tel:+13235550148">Call</a>
+          <a href="mailto:hola@vidagreens.com">Email</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Vida Greens · LoveVida. Live green. Live well.</p>
+        <p>Small batch · Made with intention</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
+  </body>
+</html>
