@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="VidaGreens — all-natural cold-pressed juice in clear 16 oz pouches. Pickup and shipping available from Huntington Park."
+      content="VidaGreens — Huntington Park’s cold-pressed smoothie bar. Clear 16 oz pouches, pressed fresh. Pickup and shipping available."
     />
     <meta name="theme-color" content="#1F3D2C" />
-    <title>VidaGreens — Clear 16 oz Juice Pouches</title>
+    <title>VidaGreens — Huntington Park Smoothie Bar</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,10 +31,17 @@
         <span></span>
       </button>
       <nav class="nav__links" id="nav-links" aria-label="Primary">
-        <a href="#pouches">Pouches</a>
+        <a href="#menu">Menu</a>
+        <a href="#ritual">Our ritual</a>
         <a href="#order">Order</a>
         <a href="#contact">Contact</a>
-        <button class="nav__cart" type="button" id="cart-toggle" aria-expanded="false" aria-controls="cart-panel">
+        <button
+          class="nav__cart"
+          type="button"
+          id="cart-toggle"
+          aria-expanded="false"
+          aria-controls="cart-panel"
+        >
           Cart
           <span class="nav__cart-count" id="cart-count" aria-live="polite">0</span>
         </button>
@@ -44,14 +51,14 @@
     <div class="cart-backdrop" id="cart-backdrop" hidden></div>
     <aside class="cart-panel" id="cart-panel" aria-hidden="true" aria-labelledby="cart-title">
       <div class="cart-panel__head">
-        <h2 id="cart-title">Your cart</h2>
+        <h2 id="cart-title">Your cooler</h2>
         <button type="button" class="cart-panel__close" id="cart-close" aria-label="Close cart">
           ×
         </button>
       </div>
       <p class="cart-panel__note">Demo cart — nothing is charged or submitted.</p>
       <ul class="cart-panel__list" id="cart-list"></ul>
-      <p class="cart-panel__empty" id="cart-empty">Your cart is empty. Add a pouch below.</p>
+      <p class="cart-panel__empty" id="cart-empty">Your cooler’s empty. Grab a pouch from the menu.</p>
       <div class="cart-panel__foot">
         <p class="cart-panel__total">
           <span>Pouches</span>
@@ -67,33 +74,81 @@
           <img
             class="hero__pouch"
             src="images/pouch-watermelon.png"
-            alt="VidaGreens Watermelon Strawberry Chia clear 16 fl oz juice pouch"
+            alt="VidaGreens Watermelon Strawberry Chia clear 16 fl oz smoothie pouch"
             width="656"
             height="1479"
             fetchpriority="high"
           />
         </div>
         <div class="hero__copy">
+          <p class="hero__locale">Huntington Park smoothie bar</p>
           <p class="hero__brand">VidaGreens</p>
-          <h1 class="hero__headline">Clear 16 oz pouches. Pickup or shipping.</h1>
+          <h1 class="hero__headline">Fresh blends in a clear pouch—made for real days.</h1>
           <p class="hero__support">
-            All-natural cold-pressed juice you can see—pressed in Huntington Park. Call, email, or
-            send your info to confirm pickup, or mock-checkout for shipping.
+            Cold-pressed smoothies with whole fruit, greens, and nothing you can’t pronounce. Pickup
+            on Pacific, or ship cold to your door.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#order">Start an order</a>
-            <a class="btn btn--ghost" href="#contact">Confirm pickup</a>
+            <a class="btn btn--primary" href="#menu">Explore the menu</a>
+            <a class="btn btn--ghost" href="#contact">Confirm a pickup</a>
           </div>
-          <p class="hero__spec">16 FL OZ · Clear pouch · Pickup &amp; shipping available</p>
+          <p class="hero__spec">Pressed daily · Clear 16 FL OZ · Pickup &amp; shipping</p>
         </div>
       </section>
 
-      <section class="section pouches" id="pouches">
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>Cold-pressed daily</span>
+          <span>Plant-based</span>
+          <span>No concentrates</span>
+          <span>No artificial anything</span>
+          <span>Refrigerated fresh</span>
+          <span>Huntington Park made</span>
+          <span>Cold-pressed daily</span>
+          <span>Plant-based</span>
+          <span>No concentrates</span>
+          <span>No artificial anything</span>
+          <span>Refrigerated fresh</span>
+          <span>Huntington Park made</span>
+        </div>
+      </div>
+
+      <section class="section standards" id="standards">
         <div class="section__header reveal">
-          <p class="eyebrow">The lineup</p>
-          <h2 class="section__title">Four clear pouches. Same honest press.</h2>
+          <p class="eyebrow">The standard</p>
+          <h2 class="section__title">A professional cooler, not a mystery mix.</h2>
           <p class="section__lede">
-            Add pouches to your demo cart, then enter contact and shipping details—no real checkout.
+            Every pouch is blended to smoothie-bar standards—clean ingredients, cold handling, and a
+            recipe you can taste.
+          </p>
+        </div>
+        <ul class="standards__list reveal">
+          <li>
+            <strong>Pressed that morning</strong>
+            <p>Batches start before the neighborhood wakes up—so your pouch tastes alive.</p>
+          </li>
+          <li>
+            <strong>Whole produce only</strong>
+            <p>Fruit, greens, nuts, seeds. No syrups, no powders, no “flavor systems.”</p>
+          </li>
+          <li>
+            <strong>Clear for a reason</strong>
+            <p>See the color, the chia, the real blend—transparency you can hold.</p>
+          </li>
+          <li>
+            <strong>Kept cold, always</strong>
+            <p>From our cooler to yours. Pickup chilled or shipped cold-packed.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section menu" id="menu">
+        <div class="section__header reveal">
+          <p class="eyebrow">The menu</p>
+          <h2 class="section__title">Four blends. Built like a smoothie bar.</h2>
+          <p class="section__lede">
+            Hydrate, greens, or cacao comfort—each clear pouch is a full 16 oz ritual you can take
+            anywhere.
           </p>
         </div>
 
@@ -113,16 +168,15 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
+              <p class="pouch-row__meta">Hydrate · 16 FL OZ · $8</p>
               <h3 class="pouch-row__name">Watermelon Strawberry Chia</h3>
+              <p class="pouch-row__best">Best for: post-walk cool-down · sunny afternoons</p>
               <p class="pouch-row__desc">
-                Juicy watermelon and ripe strawberry with chia for a soft, satisfying
-                finish—hydrating and bright.
+                Juicy watermelon and ripe strawberry with chia that softens into a silky sip—bright,
+                hydrating, and made for Pacific Blvd heat.
               </p>
               <p class="pouch-row__ingredients">Watermelon · Strawberry · Chia · Lemon</p>
-              <button class="btn btn--primary btn--add" type="button" data-add>
-                Add to cart
-              </button>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
             </div>
           </article>
 
@@ -141,15 +195,15 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
+              <p class="pouch-row__meta">Plant protein vibe · 16 FL OZ · $8</p>
               <h3 class="pouch-row__name">Chocolate Almond</h3>
+              <p class="pouch-row__best">Best for: morning fuel · afternoon craving</p>
               <p class="pouch-row__desc">
-                Cacao almond drink with real almonds and Dutch cocoa—dairy-free, rich, and smooth.
+                Real almonds and Dutch cocoa blended into a dairy-free cacao smoothie—rich enough to
+                feel like a treat, clean enough for every day.
               </p>
               <p class="pouch-row__ingredients">Almonds · Dutch cocoa · Dates · Vanilla</p>
-              <button class="btn btn--primary btn--add" type="button" data-add>
-                Add to cart
-              </button>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
             </div>
           </article>
 
@@ -168,16 +222,15 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
+              <p class="pouch-row__meta">Antioxidant greens · 16 FL OZ · $8</p>
               <h3 class="pouch-row__name">Blueberry &amp; Greens</h3>
+              <p class="pouch-row__best">Best for: desk days · steady energy</p>
               <p class="pouch-row__desc">
-                Sweet blueberry meets leafy greens for an antioxidant-bright press that still tastes
-                like fruit first.
+                Sweet blueberry leads; spinach and kale follow quietly. A greens smoothie that still
+                tastes like fruit first—never grassy, never chalky.
               </p>
               <p class="pouch-row__ingredients">Blueberry · Spinach · Kale · Apple · Lemon</p>
-              <button class="btn btn--primary btn--add" type="button" data-add>
-                Add to cart
-              </button>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
             </div>
           </article>
 
@@ -196,50 +249,94 @@
               />
             </div>
             <div class="pouch-row__body">
-              <p class="pouch-row__meta">16 FL OZ · Clear pouch · $8</p>
+              <p class="pouch-row__meta">Tropical reset · 16 FL OZ · $8</p>
               <h3 class="pouch-row__name">Pineapple &amp; Greens</h3>
+              <p class="pouch-row__best">Best for: midday lift · pre-gym brightness</p>
               <p class="pouch-row__desc">
-                Sunny pineapple lifted by greens—tangy, fresh, and built for an afternoon reset.
+                Sunny pineapple cut with cucumber and greens—tangy, crisp, and built to wake up your
+                afternoon without the crash.
               </p>
               <p class="pouch-row__ingredients">Pineapple · Kale · Spinach · Cucumber · Lime</p>
-              <button class="btn btn--primary btn--add" type="button" data-add>
-                Add to cart
-              </button>
+              <button class="btn btn--primary btn--add" type="button" data-add>Add to cooler</button>
             </div>
           </article>
         </div>
       </section>
 
+      <section class="ritual" id="ritual">
+        <div class="ritual__media reveal">
+          <img
+            src="images/ritual-produce.jpg"
+            alt="Fresh watermelon, berries, greens, pineapple, and almonds on a sunlit counter"
+            loading="lazy"
+          />
+        </div>
+        <div class="ritual__copy reveal">
+          <p class="eyebrow">Our ritual</p>
+          <h2 class="section__title">Born on Pacific. Blended for the block.</h2>
+          <p class="section__lede">
+            VidaGreens is Huntington Park’s neighborhood smoothie bar—where the cooler stays stocked,
+            the produce is loud, and “healthy” means honest.
+          </p>
+          <blockquote class="ritual__quote">
+            “If it doesn’t grow, it doesn’t go in the pouch.”
+          </blockquote>
+          <ol class="ritual__steps">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Source bright</h3>
+                <p>Peak fruit and greens—washed, cut, and ready before first pour.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Blend cold</h3>
+                <p>Cold-pressed and blended for a true smoothie texture—never watered down.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Seal clear</h3>
+                <p>Filled into clear 16 oz pouches, labeled, and chilled for pickup or ship.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
       <section class="section order" id="order">
         <div class="section__header reveal">
-          <p class="eyebrow">How to get them</p>
-          <h2 class="section__title">Pickup, ship, or confirm with us.</h2>
+          <p class="eyebrow">Get your blend</p>
+          <h2 class="section__title">Call us. Email us. Or build your cooler.</h2>
           <p class="section__lede">
-            Call, email, or send a quick message to lock in pickup—or use the demo cart for shipping
-            details.
+            We’re a real counter on Pacific—happy to confirm pickup by phone or note, or walk you
+            through shipping.
           </p>
         </div>
 
         <div class="order-paths reveal">
           <a class="order-path" href="tel:+13235550148">
-            <span class="order-path__label">Call</span>
+            <span class="order-path__label">Call the bar</span>
             <strong>(323) 555-0148</strong>
-            <span>Talk through your pickup order</span>
+            <span>We’ll confirm flavors &amp; pickup time</span>
           </a>
           <a class="order-path" href="mailto:hola@vidagreens.com?subject=Pickup%20confirmation">
-            <span class="order-path__label">Email</span>
+            <span class="order-path__label">Email hola</span>
             <strong>hola@vidagreens.com</strong>
-            <span>Send flavors, qty, and pickup time</span>
+            <span>Send your list—we reply same day</span>
           </a>
           <a class="order-path" href="#contact">
-            <span class="order-path__label">Contact form</span>
+            <span class="order-path__label">Send info</span>
             <strong>Confirm pickup</strong>
-            <span>Share your info—we’ll follow up</span>
+            <span>Name, phone, time, and order notes</span>
           </a>
           <a class="order-path" href="#checkout">
             <span class="order-path__label">Demo cart</span>
-            <strong>Ship to you</strong>
-            <span>Add pouches + enter shipping info</span>
+            <strong>Ship cold</strong>
+            <span>Add pouches + shipping details</span>
           </a>
         </div>
       </section>
@@ -247,11 +344,11 @@
       <section class="section contact" id="contact">
         <div class="contact__grid">
           <div class="contact__intro reveal">
-            <p class="eyebrow">Confirm pickup</p>
-            <h2 class="section__title">Send us your pickup details.</h2>
+            <p class="eyebrow">Talk to the bar</p>
+            <h2 class="section__title">Confirm your pickup like a regular.</h2>
             <p class="section__lede">
-              Prefer not to use the cart? Call, email, or fill this form so we can confirm your
-              order before you arrive.
+              Tell us who you are, what you want, and when you’re coming—we’ll have your pouches
+              chilled and ready.
             </p>
             <ul class="contact__channels">
               <li>
@@ -263,11 +360,11 @@
                 <a href="mailto:hola@vidagreens.com">hola@vidagreens.com</a>
               </li>
               <li>
-                <span>Visit</span>
+                <span>The bar</span>
                 <span>6120 Pacific Blvd, Huntington Park, CA 90255</span>
               </li>
               <li>
-                <span>Hours</span>
+                <span>Cooler hours</span>
                 <span>Mon–Sat 7am–7pm · Sun 8am–4pm</span>
               </li>
             </ul>
@@ -315,16 +412,15 @@
           <p class="eyebrow">Demo checkout</p>
           <h2 class="section__title">Contact &amp; shipping details.</h2>
           <p class="section__lede">
-            Add beverages to your cart, then fill this in. Nothing is processed—this is a mockup
-            only.
+            Build your cooler, then leave your info. Mockup only—call or email for a real order.
           </p>
         </div>
 
         <div class="checkout__layout reveal">
           <div class="checkout__summary">
-            <h3>Cart summary</h3>
+            <h3>Cooler summary</h3>
             <ul id="checkout-summary"></ul>
-            <p class="checkout__empty" id="checkout-empty">No pouches yet—add some above.</p>
+            <p class="checkout__empty" id="checkout-empty">No pouches yet—add some from the menu.</p>
             <p class="checkout__total">
               Estimated total
               <strong id="checkout-total">$0</strong>
@@ -367,7 +463,13 @@
               <div class="form__row form__row--split">
                 <div>
                   <label for="ship-city">City</label>
-                  <input id="ship-city" name="city" type="text" autocomplete="address-level2" required />
+                  <input
+                    id="ship-city"
+                    name="city"
+                    type="text"
+                    autocomplete="address-level2"
+                    required
+                  />
                 </div>
                 <div>
                   <label for="ship-state">State</label>
@@ -404,7 +506,12 @@
               </div>
               <div class="form__row">
                 <label for="ship-notes">Order notes</label>
-                <textarea id="ship-notes" name="notes" rows="2" placeholder="Gate code, allergies, etc."></textarea>
+                <textarea
+                  id="ship-notes"
+                  name="notes"
+                  rows="2"
+                  placeholder="Gate code, allergies, etc."
+                ></textarea>
               </div>
             </fieldset>
 
@@ -423,20 +530,20 @@
         <div>
           <p class="footer__brand">VidaGreens</p>
           <p class="footer__tag">
-            Clear 16 oz cold-pressed pouches · Pickup &amp; shipping · Huntington Park
+            Huntington Park smoothie bar · Clear 16 oz pouches · Pickup &amp; shipping
           </p>
         </div>
         <nav class="footer__nav" aria-label="Footer">
-          <a href="#pouches">Pouches</a>
+          <a href="#menu">Menu</a>
+          <a href="#ritual">Ritual</a>
           <a href="#order">Order</a>
-          <a href="#contact">Contact</a>
           <a href="tel:+13235550148">Call</a>
           <a href="mailto:hola@vidagreens.com">Email</a>
         </nav>
       </div>
       <div class="footer__bottom">
-        <p>© <span id="year"></span> VidaGreens. Pressed with care.</p>
-        <p>Demo cart · Pickup &amp; shipping available</p>
+        <p>© <span id="year"></span> VidaGreens. Live green. Live well.</p>
+        <p>Pressed daily on Pacific Blvd</p>
       </div>
     </footer>
 

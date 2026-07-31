@@ -133,9 +133,10 @@
       const row = btn.closest("[data-id]");
       if (!row) return;
       addItem(row.dataset.id, row.dataset.name, Number(row.dataset.price) || 0);
-      btn.textContent = "Added";
+      const original = btn.textContent;
+      btn.textContent = "In the cooler";
       window.setTimeout(() => {
-        btn.textContent = "Add to cart";
+        btn.textContent = original || "Add to cooler";
       }, 900);
       openCart();
     });
