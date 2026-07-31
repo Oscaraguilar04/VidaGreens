@@ -177,8 +177,22 @@
     closeCart();
   });
 
-  /* —— Demo forms (no network) —— */
-  const wireDemoForm = (formId, successId) => {
+  /* —— Forms deliver via prefilled email (no backend needed) —— */
+  const ORDER_EMAIL = "hola@vidagreens.com";
+
+  const cartSummaryText = () => {
+    if (cart.size === 0) return "(cart empty)";
+    let total = 0;
+    const lines = [];
+    cart.forEach((item) => {
+      total += item.qty * item.price;
+      lines.push(`${item.qty}x ${item.name} — $${item.qty * item.price}`);
+    });
+    lines.push(`Estimated total: $${total}`);
+    return lines.join("\n");
+  };
+
+  const wireEmailForm = (formId, successId, buildEmail) => {
     const form = document.getElementById(formId);
     const success = document.getElementById(successId);
     if (!form) return;
@@ -189,16 +203,43 @@
         form.reportValidity();
         return;
       }
-      if (success) {
-        success.hidden = false;
-        success.focus?.();
-      }
+      const data = new FormData(form);
+      const { subject, body } = buildEmail(data);
+      const href = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = href;
+      if (success) success.hidden = false;
       form.reset();
     });
   };
 
-  wireDemoForm("pickup-form", "pickup-success");
-  wireDemoForm("checkout-form", "checkout-success");
+  wireEmailForm("pickup-form", "pickup-success", (data) => ({
+    subject: `Pickup order — ${data.get("name")}`,
+    body: [
+      `Name: ${data.get("name")}`,
+      `Phone: ${data.get("phone")}`,
+      `Email: ${data.get("email")}`,
+      `Pickup time: ${data.get("when") || "(not set)"}`,
+      "",
+      "Order:",
+      data.get("order") || "(see notes)",
+    ].join("\n"),
+  }));
+
+  wireEmailForm("checkout-form", "checkout-success", (data) => ({
+    subject: `Shipping order — ${data.get("name")}`,
+    body: [
+      `Name: ${data.get("name")}`,
+      `Email: ${data.get("email")}`,
+      `Phone: ${data.get("phone")}`,
+      "",
+      `Ship to: ${data.get("address")}, ${data.get("city")}, ${data.get("state")} ${data.get("zip")}`,
+      `Method: ${data.get("method")}`,
+      `Notes: ${data.get("notes") || "(none)"}`,
+      "",
+      "Cart:",
+      cartSummaryText(),
+    ].join("\n"),
+  }));
 
   renderCart();
 })();
