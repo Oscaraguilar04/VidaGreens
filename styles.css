@@ -837,7 +837,7 @@ button {
 
 /* —— Instagram —— */
 .social {
-  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5) 30%, rgba(246, 249, 243, 0.9));
+  background: var(--white);
 }
 
 .social__layout {
@@ -884,16 +884,16 @@ button {
   justify-content: center;
 }
 
-/* Blend the embed into the page — soft frame, full column width */
+/* Blend the embed into the white section — no visible frame seam */
 .social__embed .instagram-media,
 .social__embed iframe.instagram-media {
   width: 100% !important;
   max-width: 640px !important;
   min-width: 0 !important;
   margin: 0 !important;
-  border: 1px solid rgba(31, 61, 44, 0.1) !important;
+  border: none !important;
   border-radius: 18px !important;
-  box-shadow: 0 18px 48px rgba(31, 61, 44, 0.1) !important;
+  box-shadow: none !important;
   overflow: hidden;
 }
 
