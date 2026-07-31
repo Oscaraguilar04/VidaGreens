@@ -140,6 +140,13 @@ button {
   background: var(--lime);
 }
 
+.nav__heart {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--forest);
+  transform: translateY(-1px);
+}
+
 .nav__links {
   display: flex;
   align-items: center;
