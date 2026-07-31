@@ -690,6 +690,14 @@ button {
   line-height: 1.4;
 }
 
+.visit__note {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
 .visit__actions {
   opacity: 1;
   transform: none;

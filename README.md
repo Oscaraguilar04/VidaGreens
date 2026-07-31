@@ -1,6 +1,7 @@
 # VidaGreens
 
-Static site for **VidaGreens** — all-natural cold-pressed juice in **16 oz pouches**, Huntington Park, CA.
+Static site for **VidaGreens** — all-natural cold-pressed juice in **clear 16 oz pouches**.  
+**Pickup and shipping available** from Huntington Park, CA.
 
 ## Open in the browser (no npm)
 
@@ -11,13 +12,9 @@ git checkout cursor/huerta-juicery-website-9917
 
 Open **`index.html`** in Chrome (double-click).
 
-To publish later: GitHub → **Settings → Pages** → Deploy from branch → `/` (root).
+## Flavors
 
-## Lineup
-
-Verde · Sunrise · Raíz · Tropic · Watermelon Strawberry Chia · Chocolate Almond · Blueberry & Greens · Pineapple & Greens
-
-## Files
-
-- `index.html` / `styles.css` / `script.js`
-- `images/*.png` — transparent 16 oz pouch cutouts
+1. Watermelon Strawberry Chia  
+2. Chocolate Almond  
+3. Blueberry & Greens  
+4. Pineapple & Greens  
