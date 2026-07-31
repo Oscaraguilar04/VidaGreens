@@ -1,30 +1,19 @@
 # VidaGreens
 
-Award-ready marketing site for **VidaGreens** — an all-natural cold-pressed juicery in Huntington Park, California.
+Static marketing site for **VidaGreens** — all-natural cold-pressed juice in **16 oz pouches**, Huntington Park, CA.
 
-## Stack
+## View in the browser
 
-- React 19 + TypeScript
-- Vite
-- Custom CSS (Syne + Outfit)
+No npm. No build step.
 
-## Develop
+**Live site (GitHub Pages):**  
+https://oscaraguilar04.github.io/VidaGreens/
 
-```bash
-npm install
-npm run dev
-```
+Or open `index.html` locally after cloning this branch.
 
-## Build
+## Files
 
-```bash
-npm run build
-npm run preview
-```
-
-## Sections
-
-1. **Hero** — brand-led full-bleed press photography
-2. **Menu** — Verde, Sunrise, Raíz, Tropic
-3. **Craft** — sourcing, cold-press, bottle-fresh promise
-4. **Visit** — Huntington Park location, hours, pickup CTA
+- `index.html` — page
+- `styles.css` — pouch-matched styles
+- `script.js` — nav + scroll reveals
+- `images/` — 16 oz pouch product art
